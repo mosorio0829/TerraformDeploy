@@ -24,15 +24,15 @@ resource "random_string" "uniquestring" {
   upper   = false
 }
 
-resource "azurerm_resource_group" "rg" {
-  name     = "811-6f832168-provide-continuous-delivery-with-gith"
-  location = "westus"
-}
+#resource "azurerm_resource_group" "rg" {
+#  name     = "811-6f832168-provide-continuous-delivery-with-gith"
+#  location = "westus"
+#}
 
 resource "azurerm_storage_account" "storageaccount" {
   name                     = "stg${random_string.uniquestring.result}"
-  resource_group_name      = azurerm_resource_group.rg.name
-  location                 = azurerm_resource_group.rg.location
+  resource_group_name      = "811-6f832168-provide-continuous-delivery-with-gith"
+  location                 = "westus"
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
