@@ -48,7 +48,6 @@ jobs:
       run: terraform plan -input=false
 
     - name: Terraform Apply
-      if: github.ref == 'refs/heads/terraApply' && github.event_name == 'push'
       env:
         TF_VAR_azure_client_id: ${{ secrets.AZURE_CLIENT_ID }}
         TF_VAR_azure_client_secret: ${{ secrets.AZURE_CLIENT_SECRET }}
