@@ -13,9 +13,9 @@ provider "azurerm" {
 
   # Authentication using Service Principal
   client_id       = var.azure_client_id       # Variable for Client ID
-  client_secret   = var.azure_client_secret     # Variable for Client Secret
-  tenant_id       = var.azure_tenant_id         # Variable for Tenant ID
-  subscription_id  = var.azure_subscription_id   # Variable for Subscription ID
+  client_secret   = var.azure_client_secret   # Variable for Client Secret
+  tenant_id       = var.azure_tenant_id       # Variable for Tenant ID
+  subscription_id = var.azure_subscription_id # Variable for Subscription ID
 }
 
 resource "random_string" "uniquestring" {
