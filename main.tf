@@ -10,7 +10,7 @@ terraform {
 
 provider "azurerm" {
   features {}
-
+   skip_provider_registration = true
   # Authentication using Service Principal
   client_id       = var.azure_client_id       # Variable for Client ID
   client_secret   = var.azure_client_secret   # Variable for Client Secret
